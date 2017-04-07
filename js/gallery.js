@@ -93,8 +93,12 @@ $(document).ready( function() {
 	
 	// This initially hides the photos' metadata information
 	$('.details').eq(0).hide();
-	
-});
+		$('.moreIndicator').click(function(){
+			console.log("i cliked it");
+			$('.details').eq(0).toggle();											
+			$(this).removeClass("rot90");
+			$(this).addClass("rot270");
+	});
 
 window.addEventListener('load', function() {
 	
