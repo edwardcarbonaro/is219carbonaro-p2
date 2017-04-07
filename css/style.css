@@ -55,10 +55,20 @@ body {
 	width: 42px;
 }
 
+#prevPhoto:hover{				
+	opacity:0.3;
+}
+
+
 #nextPhoto {
 	height: 42px;
 	width: 42px;
 }
+#nextPhoto:hover{				
+	opacity:0.3;
+
+}
+
 
 .details p {
 	margin-top: 20px;
