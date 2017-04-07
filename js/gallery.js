@@ -45,7 +45,29 @@ var mCurrentIndex = 0;
 
 // XMLHttpRequest variable
 var mRequest = new XMLHttpRequest();
-
+mRequest.onreadystatechange = function() {
+// Do something interesting if file is opened successfully
+	if (mRequest.readyState == 4 && mRequest.status == 200) {
+		try {
+			// Let’s try and see if we can parse JSON
+			mJson = JSON.parse(mRequest.responseText);
+			// Let’s print out the JSON; It will likely show as “obj”
+			console.log(mJson);
+			
+			for (var i =0; i < mJson.images.length; i++){
+				var myLine = mJson.images[i];
+				
+				mImages.push(new GalleryImage(myLine.imgLocation, myLine.description,myLine.date,myLine.imgPath));
+			}
+			
+			
+		} catch(err) {
+			console.log(err.message)
+		}
+	}
+};
+mRequest.open("GET",mURL, true);
+mRequest.send();
 // Array holding GalleryImage objects (see below).
 var mImages = [];
 
