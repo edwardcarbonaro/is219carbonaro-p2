@@ -42,7 +42,7 @@ function swapPhoto() {
 	$('.location').attr("p",mImages[mCurrentIndex].imgLocation);
 	$('.description').attr("p",mImages[mCurrentIndex].description);
 	$('.date').attr("p",mImages[mCurrentIndex].date);
-	
+	mCurrentIndex++;
 }	
 
 // Counter for the mImages array
