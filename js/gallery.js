@@ -38,8 +38,11 @@ function swapPhoto() {
 	//with a new image from your images array which is loaded 
 	//from the JSON string
 	console.log('swap photo');
-	$('#photo').attr("src",mImages[0].imgPath);
-}
+	$('#photo').attr("src",mImages[0].imgPath);		
+	$('#location').attr("p",mImages[0].imgLocation);
+	$('#description').attr("p",mImages[0].description);
+	$('#date').attr("p",mImages[0].date);
+}	
 
 // Counter for the mImages array
 var mCurrentIndex = 0;
@@ -74,7 +77,7 @@ mRequest.send();
 var mImages = [];
 
 // Holds the retrived JSON information
-var mJson = [];
+var mJson;
 
 // URL for the JSON to load by default
 // Some options for you are: images.json, images.short.json; you will need to create your own extra.json later
