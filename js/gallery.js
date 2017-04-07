@@ -39,9 +39,9 @@ function swapPhoto() {
 	//from the JSON string
 	console.log('swap photo');
 	$('#photo').attr("src",mImages[0].imgPath);		
-	$('#location').attr("p",mImages[0].imgLocation);
-	$('#description').attr("p",mImages[0].description);
-	$('#date').attr("p",mImages[0].date);
+	$('.location').attr("p",mImages[0].imgLocation);
+	$('.description').attr("p",mImages[0].description);
+	$('.date').attr("p",mImages[0].date);
 }	
 
 // Counter for the mImages array
