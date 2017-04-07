@@ -38,16 +38,19 @@ function swapPhoto() {
 	//with a new image from your images array which is loaded 
 	//from the JSON string
 	console.log('swap photo');
-	$('#photo').attr("src",mImages[0].imgPath);		
-	$('.location').attr("p",mImages[0].imgLocation);
-	$('.description').attr("p",mImages[0].description);
-	$('.date').attr("p",mImages[0].date);
+	//$('#photo').attr("src",mImages[mCurrentIndex].imgPath);		
+	//$('.location').attr("p",mImages[mCurrentIndex].imgLocation);
+	//$('.description').attr("p",mImages[mCurrentIndex].description);
+	//$('.date').attr("p",mImages[mCurrentIndex].date);
+	
 }	
 
 // Counter for the mImages array
 var mCurrentIndex = 0;
 
+
 // XMLHttpRequest variable
+var mURL = 'images.json'; 
 var mRequest = new XMLHttpRequest();
 mRequest.onreadystatechange = function() {
 // Do something interesting if file is opened successfully
@@ -56,8 +59,8 @@ mRequest.onreadystatechange = function() {
 			// Let’s try and see if we can parse JSON
 			mJson = JSON.parse(mRequest.responseText);
 			// Let’s print out the JSON; It will likely show as “obj”
-			console.log(mJson);
-			
+			console.log(mJson);	
+			console.log("test message");	
 			for (var i =0; i < mJson.images.length; i++){
 				var myLine = mJson.images[i];
 				
@@ -70,7 +73,6 @@ mRequest.onreadystatechange = function() {
 		}
 	}
 };
-var mUrl = 'images.json'; 
 mRequest.open("GET",mURL, true);
 mRequest.send();
 // Array holding GalleryImage objects (see below).
