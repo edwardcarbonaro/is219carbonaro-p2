@@ -27,10 +27,11 @@ body {
 .moreIndicator {
 	height: 50px;
 	width: 50px;
-	position: absolute;
+	position: relative;
 	z-index: 3;
 	opacity: .8;
-	top: 0px;
+	top: -60px;
+	left: 300px;
 }
 
 .thumbnail {
