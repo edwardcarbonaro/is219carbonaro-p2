@@ -38,10 +38,10 @@ function swapPhoto() {
 	//with a new image from your images array which is loaded 
 	//from the JSON string
 	console.log('swap photo');
-	$('#photo').attr("src",mImages[mCurrentIndex].imgPath);		
-	$('.location').attr("p",mImages[mCurrentIndex].imgLocation);
-	$('.description').attr("p",mImages[mCurrentIndex].description);
-	$('.date').attr("p",mImages[mCurrentIndex].date);
+	$('#photo').attr("src",mImages[mCurrentIndex].img);	
+	$('.location').text(mImages[mCurrentIndex].location);
+	$('.description').text(mImages[mCurrentIndex].description);
+	$('.date').text(mImages[mCurrentIndex].date);
 	mCurrentIndex++;
 }	
 
