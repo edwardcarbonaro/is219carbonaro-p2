@@ -38,6 +38,7 @@ function swapPhoto() {
 	//with a new image from your images array which is loaded 
 	//from the JSON string
 	console.log('swap photo');
+	$('#photo').attr("src",mImages[0].imgPath);
 }
 
 // Counter for the mImages array
@@ -101,7 +102,7 @@ window.addEventListener('load', function() {
 
 }, false);
 
-function GalleryImage(location,description,date,url) {
+function GalleryImage(location,description,date,img) {
 	this.location = location;
 	this.description = description;
 	this.date = date;
