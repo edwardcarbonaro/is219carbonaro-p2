@@ -67,6 +67,7 @@ mRequest.onreadystatechange = function() {
 		}
 	}
 };
+var mUrl = 'images.json'; 
 mRequest.open("GET",mURL, true);
 mRequest.send();
 // Array holding GalleryImage objects (see below).
@@ -77,7 +78,7 @@ var mJson = [];
 
 // URL for the JSON to load by default
 // Some options for you are: images.json, images.short.json; you will need to create your own extra.json later
-var mUrl = 'images.json'; 
+
 
 
 //You can optionally use the following function as your event callback for loading the source of Images from your json data (for HTMLImageObject).
@@ -99,7 +100,7 @@ $(document).ready( function() {
 			$(this).removeClass("rot90");
 			$(this).addClass("rot270");
 	});
-
+});
 window.addEventListener('load', function() {
 	
 	console.log('window loaded');
