@@ -102,7 +102,7 @@ $(document).ready( function() {
 	
 	$('.moreIndicator').click(function(){
 		console.log("i cliked it");
-		$('.details').eq(0).fadeToggle("slow", "linear");										
+		$('.details').eq(0).fadeToggle("fast", "linear");										
 		$(this).toggleClass("rot90");
 		$(this).toggleClass("rot270");
 		
