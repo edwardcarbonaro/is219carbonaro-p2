@@ -111,7 +111,10 @@ $(document).ready( function() {
 	
 	$('#nextPhoto').click(function(){	
 		console.log("testing next next photo button");
-		//$('#photo').attr("src",mImages[mCurrentIndex+1].next().img);		
+		$('#photo').attr("src",mImages[mCurrentIndex + 1].img);		
+		$('.location').text(mImages[mCurrentIndex+1].location);
+		$('.description').text(mImages[mCurrentIndex+1].description);
+		$('.date').text(mImages[mCurrentIndex+1].date);
 	});
 	
 	
