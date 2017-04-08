@@ -96,7 +96,7 @@ function makeGalleryImageOnloadCallback(galleryImage) {
 }
 
 $(document).ready( function() {
-	
+	$('#photo').width("500px");
 	// This initially hides the photos' metadata information
 	$('.details').eq(0).hide();
 	
