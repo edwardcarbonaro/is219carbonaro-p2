@@ -120,7 +120,10 @@ $(document).ready( function() {
 	
 	$('#prevPhoto').click(function(){	
 		console.log("testing prev photo button");
-		//$('#photo').attr("src",mImages[mCurrentIndex-1].img);				
+		$('#photo').attr("src",mImages[mCurrentIndex-1].img);	
+		$('.location').text(mImages[mCurrentIndex-1].location);
+		$('.description').text(mImages[mCurrentIndex-1].description);
+		$('.date').text(mImages[mCurrentIndex-1].date);				
 	});
 	
 	
