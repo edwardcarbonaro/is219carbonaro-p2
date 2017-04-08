@@ -111,7 +111,7 @@ $(document).ready( function() {
 		$('#photo').attr("src",mImages[mCurrentIndex+1].img);		
 	});
 	$('#prevPhoto').click(function(){	
-		console.log("testing next next photo button");
+		console.log("testing prev photo button");
 		$('#photo').attr("src",mImages[mCurrentIndex-1].img);				
 	});
 });
