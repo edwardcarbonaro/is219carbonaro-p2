@@ -99,21 +99,28 @@ $(document).ready( function() {
 	
 	// This initially hides the photos' metadata information
 	$('.details').eq(0).hide();
-		$('.moreIndicator').click(function(){
+	
+	$('.moreIndicator').click(function(){
 		console.log("i cliked it");
-			$('.details').eq(0).toggle();											
-			$(this).toggleClass("rot90");
-			$(this).toggleClass("rot270");
-			$(this).fadeToggle("slow", "linear");
+		$('.details').eq(0).fadeToggle("slow", "linear");										
+		$(this).toggleClass("rot90");
+		$(this).toggleClass("rot270");
+		
 	});
+	
+	
 	$('#nextPhoto').click(function(){	
 		console.log("testing next next photo button");
-		$('#photo').attr("src",mImages[mCurrentIndex+1].img);		
+		//$('#photo').attr("src",mImages[mCurrentIndex+1].img);		
 	});
+	
+	
 	$('#prevPhoto').click(function(){	
 		console.log("testing prev photo button");
-		$('#photo').attr("src",mImages[mCurrentIndex-1].img);				
+		//$('#photo').attr("src",mImages[mCurrentIndex-1].img);				
 	});
+	
+	
 });
 window.addEventListener('load', function() {
 	
